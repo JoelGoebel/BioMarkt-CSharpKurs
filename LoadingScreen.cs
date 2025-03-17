@@ -20,21 +20,24 @@ namespace ProNaturBiomarkt
 
         private void LoadingbarTimer_Tick(object sender, EventArgs e)
         {
-            float Tick = 0;
-            Tick += 0.2f;
 
-            if (Tick <= 1)
+            if(loadingbarValue >= progressBar1.Maximum)
             {
-                if(progressBar1.Value == progressBar1.Maximum)
-                {
-                    LoadingbarTimer.Stop();
-                }else
-                {
-                    progressBar1.Value += 1;
-                    lb_ProgressInPercent.Text = progressBar1.Value.ToString() + "%";
-                    Tick = 0;
-                }                    
+                LoadingbarTimer.Stop();
+
+                MainMenuScreen mainMenuScreen = new MainMenuScreen();
+                mainMenuScreen.Show();
+                
+                this.Hide();    
+                    
             }
+            else
+            {
+                loadingbarValue +=  2 ;
+                progressBar1.Value = loadingbarValue ;
+                lb_ProgressInPercent.Text = loadingbarValue.ToString() + "%";                   
+            }                    
+            
             
         }
 
