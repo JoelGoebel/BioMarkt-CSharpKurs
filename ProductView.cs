@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace ProNaturBiomarkt
 {
-    public partial class MainMenuScreen: Form
+    public partial class ProductView: Form
     {
-        public MainMenuScreen()
+        public ProductView()
         {
             InitializeComponent();
-        }
-
-        private void btn_Products_Click(object sender, EventArgs e)
-        {
-            ProductView pw = new ProductView();
-            pw.Show();
-            this.Hide();
         }
     }
 }

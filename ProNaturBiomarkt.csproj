@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProductView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductView.Designer.cs">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuScreen.resx">
       <DependentUpon>MainMenuScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductView.resx">
+      <DependentUpon>ProductView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

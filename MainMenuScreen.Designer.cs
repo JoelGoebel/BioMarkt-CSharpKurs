@@ -40,6 +40,7 @@
             this.btn_Products.ForeColor = System.Drawing.Color.White;
             this.btn_Products.Name = "btn_Products";
             this.btn_Products.UseVisualStyleBackColor = true;
+            this.btn_Products.Click += new System.EventHandler(this.btn_Products_Click);
             // 
             // btn_Rechnung
             // 
@@ -56,6 +57,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Controls.Add(this.btn_Rechnung);
             this.Controls.Add(this.btn_Products);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainMenuScreen";
