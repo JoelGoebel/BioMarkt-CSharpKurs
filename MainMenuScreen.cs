@@ -23,5 +23,12 @@ namespace ProNaturBiomarkt
             pw.Show();
             this.Hide();
         }
+
+        private void btn_Rechnung_Click(object sender, EventArgs e)
+        {
+            Rechnungserstellung rechnungserstellung = new Rechnungserstellung();
+            rechnungserstellung.Show();
+            this.Hide();
+        }
     }
 }

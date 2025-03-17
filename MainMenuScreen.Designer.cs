@@ -49,6 +49,7 @@
             this.btn_Rechnung.ForeColor = System.Drawing.Color.White;
             this.btn_Rechnung.Name = "btn_Rechnung";
             this.btn_Rechnung.UseVisualStyleBackColor = true;
+            this.btn_Rechnung.Click += new System.EventHandler(this.btn_Rechnung_Click);
             // 
             // MainMenuScreen
             // 
