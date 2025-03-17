@@ -195,12 +195,26 @@
             // 
             // dgw_ProductTable
             // 
+            this.dgw_ProductTable.AllowUserToAddRows = false;
+            this.dgw_ProductTable.AllowUserToDeleteRows = false;
+            this.dgw_ProductTable.AllowUserToResizeColumns = false;
+            this.dgw_ProductTable.AllowUserToResizeRows = false;
+            this.dgw_ProductTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgw_ProductTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.dgw_ProductTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgw_ProductTable.Location = new System.Drawing.Point(12, 156);
+            this.dgw_ProductTable.MultiSelect = false;
             this.dgw_ProductTable.Name = "dgw_ProductTable";
+            this.dgw_ProductTable.ReadOnly = true;
+            this.dgw_ProductTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgw_ProductTable.RowHeadersVisible = false;
+            this.dgw_ProductTable.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dgw_ProductTable.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.dgw_ProductTable.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(113)))));
+            this.dgw_ProductTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgw_ProductTable.Size = new System.Drawing.Size(775, 293);
             this.dgw_ProductTable.TabIndex = 13;
+            this.dgw_ProductTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_ProductTable_CellContentClick);
             // 
             // ProductView
             // 
