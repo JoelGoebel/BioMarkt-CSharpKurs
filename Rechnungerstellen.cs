@@ -66,10 +66,17 @@ namespace ProNaturBiomarkt
                 return;
             }
             reader.Close();
-            //TODO Überprüfen warum nicht in DB eingetragen wurde
-            string query2 = string.Format("insert into Rechnungspositionen values('{0}','{1}','{2}','{3}','{4}')",RechnungID,ProduktID,ProduktMenge,price,price*ProduktMenge);
+            
+            string query2 = "INSERT INTO Rechnungspositionen (rechnung_id, produkt_id, menge, einzelpreis, gesamtpreis) " +
+                "VALUES (@rechnungID, @produktID, @menge, @einzelpreis, @gesamtpreis)";
 
-            SqlCommand sqlCommand2 = new SqlCommand(query, DatabaseConnection);
+            SqlCommand sqlCommand2 = new SqlCommand(query2, DatabaseConnection);
+            sqlCommand2.Parameters.AddWithValue("@rechnungID", RechnungID);
+            sqlCommand2.Parameters.AddWithValue("@produktID", ProduktID);
+            sqlCommand2.Parameters.AddWithValue("@menge", ProduktMenge);
+            sqlCommand2.Parameters.AddWithValue("@einzelpreis", price);
+            sqlCommand2.Parameters.AddWithValue("@gesamtpreis", price * ProduktMenge);
+
             sqlCommand2.ExecuteNonQuery();
 
             DatabaseConnection.Close();
