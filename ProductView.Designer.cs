@@ -42,6 +42,7 @@
             this.btn_ProductClear = new System.Windows.Forms.Button();
             this.btn_ProductDelete = new System.Windows.Forms.Button();
             this.dgw_ProductTable = new System.Windows.Forms.DataGridView();
+            this.btn_BackToMainMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_ProductTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -216,12 +217,26 @@
             this.dgw_ProductTable.TabIndex = 13;
             this.dgw_ProductTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_ProductTable_CellContentClick);
             // 
+            // btn_BackToMainMenu
+            // 
+            this.btn_BackToMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btn_BackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BackToMainMenu.ForeColor = System.Drawing.Color.White;
+            this.btn_BackToMainMenu.Location = new System.Drawing.Point(459, 127);
+            this.btn_BackToMainMenu.Name = "btn_BackToMainMenu";
+            this.btn_BackToMainMenu.Size = new System.Drawing.Size(328, 23);
+            this.btn_BackToMainMenu.TabIndex = 14;
+            this.btn_BackToMainMenu.Text = "Zurück zum Hauptmenü";
+            this.btn_BackToMainMenu.UseVisualStyleBackColor = false;
+            this.btn_BackToMainMenu.Click += new System.EventHandler(this.btn_BackToMainMenu_Click);
+            // 
             // ProductView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(799, 461);
+            this.Controls.Add(this.btn_BackToMainMenu);
             this.Controls.Add(this.dgw_ProductTable);
             this.Controls.Add(this.btn_ProductDelete);
             this.Controls.Add(this.btn_ProductClear);
@@ -261,5 +276,6 @@
         private System.Windows.Forms.Button btn_ProductClear;
         private System.Windows.Forms.Button btn_ProductDelete;
         private System.Windows.Forms.DataGridView dgw_ProductTable;
+        private System.Windows.Forms.Button btn_BackToMainMenu;
     }
 }

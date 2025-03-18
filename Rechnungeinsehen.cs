@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace ProNaturBiomarkt
 {
-    public partial class Rechnungserstellung: Form
+    public partial class Rechnungeinsehen: Form
     {
-        public Rechnungserstellung()
+        public Rechnungeinsehen()
         {
             InitializeComponent();
+        }
+
+        private void btn_zurück_Click(object sender, EventArgs e)
+        {
+            RechnungsSuche rechnungsSuche = new RechnungsSuche();
+            rechnungsSuche.Show();
+            this.Hide();
         }
     }
 }

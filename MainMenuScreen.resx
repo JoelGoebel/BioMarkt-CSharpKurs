@@ -121,7 +121,7 @@
   <data name="btn_Products.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARMAAAB9CAIAAAAOQhBxAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAA/7JJREFUeF40fXtz6Xz39/7d97WvvdsqkfM5IkJEiAgRISJEhIgzpapFaev9v4Fn
+        EAAACxABrSO9dQAA/7JJREFUeF40fXtz6Xz39/7d97WvvdsqkfM5IkJEiAgRISJEhIgzpapFaev9v4Fn
         3DPPjD+MMZlhsvJd63Nav2oWkubxZBzM8dCol8egBCsi9rhqzxWtg5QMMC8TaDKeYvFCMYVgf8tloVLh
         sllMKYgPf/9xeub6Y2QOlHJHML2MbpGSjNAonnzCIAhUa/R40+iNi7oBawqsSRKH8IlYDCf/VmtUUcW5
         VJzjUJokUjRNIRgC/ylbGX9aG48NNxBbNmeWkkoOqJTln69jt2W0jdJu6i38VtQ2dZ7NIjCH4FAcQpNw
@@ -1558,7 +1558,7 @@
   <data name="btn_Rechnung.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARMAAAB9CAIAAAAOQhBxAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAA/7JJREFUeF6E/QlX28rSPQ6Dbc1Sq6XWPA+WLcvyDLYxGMJMQgiZTs58z3zPzff/
+        EAAACxABrSO9dQAA/7JJREFUeF6E/QlX28rSPQ6Dbc1Sq6XWPA+WLcvyDLYxGMJMQgiZTs58z3zPzff/
         Au+qliE59z6//5vVy0s4hASiraratWvX3pt5/GaefDwqP53UDwfFMrUmAZkn9iQ0DjNvHJgplkOFT1Qx
         15RCQ104SldTMiynqpSqUo7lQlN6cORSVyqCKqKUulxqcHqa1NPl0lQHFk6wbIl8pMozVz+KzHVszn19
         4umz0JyF5iQwhg4uiTwkythEEwuNDLnWpYmJZpY6s9WphYa6tAjIIjTGjjoPjIPYGnv6gMhzB619vA7g
@@ -2717,7 +2717,7 @@
     <value>1</value>
   </data>
   <data name="btn_Rechnung.Text" xml:space="preserve">
-    <value>Rechnung erstellen</value>
+    <value>Rechnung verwalten</value>
   </data>
   <data name="&gt;&gt;btn_Rechnung.Name" xml:space="preserve">
     <value>btn_Rechnung</value>

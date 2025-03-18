@@ -131,5 +131,12 @@ namespace ProNaturBiomarkt
             sqlCommand.ExecuteNonQuery();
             DatabaseConnection.Close();
         }
+
+        private void btn_BackToMainMenu_Click(object sender, EventArgs e)
+        {
+            MainMenuScreen mainMenuScreen = new MainMenuScreen();
+            mainMenuScreen.Show();
+            this.Hide();
+        }
     }
 }
