@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rechnung.cs" />
     <Compile Include="Rechnungerstellen.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -24,9 +24,13 @@ namespace ProNaturBiomarkt
 
         private void btn_RechnungEinsehen_Click(object sender, EventArgs e)
         {
-            Rechnungeinsehen rechnungseinsehen = new Rechnungeinsehen();
-            rechnungseinsehen.Show();
-            this.Hide();
+            if (tb_Rechnungsnummer_suche.Text != "")
+            {
+                int rechnungsnummer = int.Parse(tb_Rechnungsnummer_suche.Text);
+                Rechnungeinsehen rechnungseinsehen = new Rechnungeinsehen(rechnungsnummer);
+                rechnungseinsehen.Show();
+                this.Hide();
+            }
         }
         private void showRechnungen()
         {
@@ -55,6 +59,49 @@ namespace ProNaturBiomarkt
             MainMenuScreen mainMenuScreen = new MainMenuScreen();
             mainMenuScreen.Show();
             this.Hide();
+        }
+
+        private void btn_RechnungSuchen_Click(object sender, EventArgs e)
+        {
+            string KundenID = tb_KundenID_Suche.Text;
+            string Rechnungnummer = tb_Rechnungsnummer_suche.Text;
+            string Status = cb_Status_Suche.Text;
+
+            string query;
+
+            if (KundenID != "" || Rechnungnummer != "" || Status != "")
+            {
+                if(Rechnungnummer != "")
+                {
+                    query = string.Format("select * From Rechnung where Rechnungs_ID='{0}';",Rechnungnummer);
+                }
+                else if(KundenID != "" && Status !="")
+                {
+                    query = string.Format("select * From Rechnung where KundenID='{0}' AND Status='{1}';", KundenID, Status);
+                }
+                else if(KundenID != "")
+                {
+                    query = string.Format("select * From Rechnung where KundenID='{0}';",KundenID);
+                }
+                else
+                {
+                    query = string.Format("select * From Rechnung where Status='{0}';", Status);
+                }
+                DatabaseConnection.Open();
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, DatabaseConnection);
+                DataSet dataset = new DataSet();
+
+                sqlDataAdapter.Fill(dataset);
+                dgv_Rechnungen.DataSource = dataset.Tables[0];
+
+                DatabaseConnection.Close();
+            }
+            else
+            {
+                MessageBox.Show("bitte gebe zuerst einen Suchparameter ein");
+                return;
+            }
         }
     }
 }

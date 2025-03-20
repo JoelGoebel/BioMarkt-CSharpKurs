@@ -33,7 +33,7 @@ namespace ProNaturBiomarkt
             }
             else
             {
-                loadingbarValue +=  2 ;
+                loadingbarValue +=  5 ;
                 progressBar1.Value = loadingbarValue ;
                 lb_ProgressInPercent.Text = loadingbarValue.ToString() + "%";                   
             }                    

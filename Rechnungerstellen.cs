@@ -38,7 +38,7 @@ namespace ProNaturBiomarkt
                 ConnectInvoiceWithProducts(RechnungsID, Product.Key, Product.Value);
             }
                                     
-            Rechnungeinsehen rechnungseinsehen = new Rechnungeinsehen();
+            Rechnungeinsehen rechnungseinsehen = new Rechnungeinsehen(RechnungsID);
             rechnungseinsehen.Show();
             this.Hide();
         }
@@ -98,6 +98,7 @@ namespace ProNaturBiomarkt
         private Dictionary<string,int> TextBoxenAuslesen()
         {
             Dictionary<string, int> Produkte_Menge = new Dictionary<string, int>();
+
 
             if (tb_Produkt1_erstellen.Text != "") { Produkte_Menge.Add(tb_Produkt1_erstellen.Text, int.Parse(tb_Produkt1Menge_erstellen.Text)); }
             if (tb_Produkt2_erstellen.Text != "") { Produkte_Menge.Add(tb_Produkt2_erstellen.Text, int.Parse(tb_Produkt2Menge_erstellen.Text)); }
