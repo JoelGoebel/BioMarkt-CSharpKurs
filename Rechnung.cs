@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProNaturBiomarkt
 {
-    class Rechnung
+    public class Rechnung
     {
         //Aus Tabelle Rechnung
         public int Re_Invoice_ID { get; private set; }
@@ -15,8 +15,8 @@ namespace ProNaturBiomarkt
         public DateTime Re_DueDate { get; private set; }
         
         //Aus Tabelle Products
-        public string Pro_Name { get; private set; }
-        public string Pro_Brand { get; private set; }
+        public List<string> Pro_Name { get; private set; }
+        public List<string> Pro_Brand { get; private set; }
 
         //Aus Tabelle RechnungsPositionen
         public List<int> RePo_ProductID { get; private set; }
@@ -31,7 +31,7 @@ namespace ProNaturBiomarkt
 
 
         public Rechnung
-            (int re_Invoice_ID, int re_CustomerID, DateTime re_Date, DateTime re_DueDate, string pro_Name, string pro_Brand, List<int> repo_ProductID,
+            (int re_Invoice_ID, int re_CustomerID, DateTime re_Date, DateTime re_DueDate, List<string> pro_Name, List<string> pro_Brand, List<int> repo_ProductID,
             List<int> repo_Amount, List<Decimal> repo_Price, List<Decimal>repo_TotalPrice, string ku_Name, string ku_LastName, string ku_Adress)
         {
             Re_Invoice_ID = re_Invoice_ID;

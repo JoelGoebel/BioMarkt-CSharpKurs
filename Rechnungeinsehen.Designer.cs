@@ -36,16 +36,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lbl_KundenFirmenName = new System.Windows.Forms.Label();
+            this.lbl_KundenName = new System.Windows.Forms.Label();
             this.lbl_KundenStraße = new System.Windows.Forms.Label();
             this.lbl_KundenOrt = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_RECHNUNG = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btn_zurück = new System.Windows.Forms.Button();
+            this.lbl_Faelligkeitsdatum = new System.Windows.Forms.Label();
+            this.lbl_Rechnungsdatum = new System.Windows.Forms.Label();
+            this.lbl_Rechnungsnummer = new System.Windows.Forms.Label();
+            this.lbl_Nettobetrag = new System.Windows.Forms.Label();
+            this.lbl_GesamtSumme = new System.Windows.Forms.Label();
+            this.lbl_UmsatzSteuer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -126,16 +132,16 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Fälligkeitsdatum";
             // 
-            // lbl_KundenFirmenName
+            // lbl_KundenName
             // 
-            this.lbl_KundenFirmenName.AutoSize = true;
-            this.lbl_KundenFirmenName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbl_KundenFirmenName.ForeColor = System.Drawing.Color.White;
-            this.lbl_KundenFirmenName.Location = new System.Drawing.Point(25, 186);
-            this.lbl_KundenFirmenName.Name = "lbl_KundenFirmenName";
-            this.lbl_KundenFirmenName.Size = new System.Drawing.Size(95, 17);
-            this.lbl_KundenFirmenName.TabIndex = 7;
-            this.lbl_KundenFirmenName.Text = "Muster GmbH";
+            this.lbl_KundenName.AutoSize = true;
+            this.lbl_KundenName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_KundenName.ForeColor = System.Drawing.Color.White;
+            this.lbl_KundenName.Location = new System.Drawing.Point(25, 186);
+            this.lbl_KundenName.Name = "lbl_KundenName";
+            this.lbl_KundenName.Size = new System.Drawing.Size(95, 17);
+            this.lbl_KundenName.TabIndex = 7;
+            this.lbl_KundenName.Text = "Muster GmbH";
             // 
             // lbl_KundenStraße
             // 
@@ -170,16 +176,16 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "30 Tage";
             // 
-            // label8
+            // lbl_RECHNUNG
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(12, 272);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 24);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Rechnung";
+            this.lbl_RECHNUNG.AutoSize = true;
+            this.lbl_RECHNUNG.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lbl_RECHNUNG.ForeColor = System.Drawing.Color.White;
+            this.lbl_RECHNUNG.Location = new System.Drawing.Point(12, 272);
+            this.lbl_RECHNUNG.Name = "lbl_RECHNUNG";
+            this.lbl_RECHNUNG.Size = new System.Drawing.Size(99, 24);
+            this.lbl_RECHNUNG.TabIndex = 11;
+            this.lbl_RECHNUNG.Text = "Rechnung";
             // 
             // dataGridView1
             // 
@@ -234,22 +240,95 @@
             this.btn_zurück.UseVisualStyleBackColor = false;
             this.btn_zurück.Click += new System.EventHandler(this.btn_zurück_Click);
             // 
+            // lbl_Faelligkeitsdatum
+            // 
+            this.lbl_Faelligkeitsdatum.AutoSize = true;
+            this.lbl_Faelligkeitsdatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_Faelligkeitsdatum.ForeColor = System.Drawing.Color.White;
+            this.lbl_Faelligkeitsdatum.Location = new System.Drawing.Point(531, 237);
+            this.lbl_Faelligkeitsdatum.Name = "lbl_Faelligkeitsdatum";
+            this.lbl_Faelligkeitsdatum.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_Faelligkeitsdatum.Size = new System.Drawing.Size(80, 17);
+            this.lbl_Faelligkeitsdatum.TabIndex = 17;
+            this.lbl_Faelligkeitsdatum.Text = "01.01.2000";
+            // 
+            // lbl_Rechnungsdatum
+            // 
+            this.lbl_Rechnungsdatum.AutoSize = true;
+            this.lbl_Rechnungsdatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_Rechnungsdatum.ForeColor = System.Drawing.Color.White;
+            this.lbl_Rechnungsdatum.Location = new System.Drawing.Point(531, 203);
+            this.lbl_Rechnungsdatum.Name = "lbl_Rechnungsdatum";
+            this.lbl_Rechnungsdatum.Size = new System.Drawing.Size(80, 17);
+            this.lbl_Rechnungsdatum.TabIndex = 18;
+            this.lbl_Rechnungsdatum.Text = "01.01.2000";
+            // 
+            // lbl_Rechnungsnummer
+            // 
+            this.lbl_Rechnungsnummer.AutoSize = true;
+            this.lbl_Rechnungsnummer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_Rechnungsnummer.ForeColor = System.Drawing.Color.White;
+            this.lbl_Rechnungsnummer.Location = new System.Drawing.Point(531, 186);
+            this.lbl_Rechnungsnummer.Name = "lbl_Rechnungsnummer";
+            this.lbl_Rechnungsnummer.Size = new System.Drawing.Size(16, 17);
+            this.lbl_Rechnungsnummer.TabIndex = 19;
+            this.lbl_Rechnungsnummer.Text = "0";
+            // 
+            // lbl_Nettobetrag
+            // 
+            this.lbl_Nettobetrag.AutoSize = true;
+            this.lbl_Nettobetrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_Nettobetrag.ForeColor = System.Drawing.Color.White;
+            this.lbl_Nettobetrag.Location = new System.Drawing.Point(598, 536);
+            this.lbl_Nettobetrag.Name = "lbl_Nettobetrag";
+            this.lbl_Nettobetrag.Size = new System.Drawing.Size(16, 17);
+            this.lbl_Nettobetrag.TabIndex = 20;
+            this.lbl_Nettobetrag.Text = "0";
+            // 
+            // lbl_GesamtSumme
+            // 
+            this.lbl_GesamtSumme.AutoSize = true;
+            this.lbl_GesamtSumme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_GesamtSumme.ForeColor = System.Drawing.Color.White;
+            this.lbl_GesamtSumme.Location = new System.Drawing.Point(598, 570);
+            this.lbl_GesamtSumme.Name = "lbl_GesamtSumme";
+            this.lbl_GesamtSumme.Size = new System.Drawing.Size(16, 17);
+            this.lbl_GesamtSumme.TabIndex = 21;
+            this.lbl_GesamtSumme.Text = "0";
+            // 
+            // lbl_UmsatzSteuer
+            // 
+            this.lbl_UmsatzSteuer.AutoSize = true;
+            this.lbl_UmsatzSteuer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_UmsatzSteuer.ForeColor = System.Drawing.Color.White;
+            this.lbl_UmsatzSteuer.Location = new System.Drawing.Point(598, 553);
+            this.lbl_UmsatzSteuer.Name = "lbl_UmsatzSteuer";
+            this.lbl_UmsatzSteuer.Size = new System.Drawing.Size(16, 17);
+            this.lbl_UmsatzSteuer.TabIndex = 22;
+            this.lbl_UmsatzSteuer.Text = "0";
+            // 
             // Rechnungeinsehen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(676, 620);
+            this.Controls.Add(this.lbl_UmsatzSteuer);
+            this.Controls.Add(this.lbl_GesamtSumme);
+            this.Controls.Add(this.lbl_Nettobetrag);
+            this.Controls.Add(this.lbl_Rechnungsnummer);
+            this.Controls.Add(this.lbl_Rechnungsdatum);
+            this.Controls.Add(this.lbl_Faelligkeitsdatum);
             this.Controls.Add(this.btn_zurück);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lbl_RECHNUNG);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lbl_KundenOrt);
             this.Controls.Add(this.lbl_KundenStraße);
-            this.Controls.Add(this.lbl_KundenFirmenName);
+            this.Controls.Add(this.lbl_KundenName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -275,15 +354,21 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lbl_KundenFirmenName;
+        private System.Windows.Forms.Label lbl_KundenName;
         private System.Windows.Forms.Label lbl_KundenStraße;
         private System.Windows.Forms.Label lbl_KundenOrt;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_RECHNUNG;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btn_zurück;
+        private System.Windows.Forms.Label lbl_Faelligkeitsdatum;
+        private System.Windows.Forms.Label lbl_Rechnungsdatum;
+        private System.Windows.Forms.Label lbl_Rechnungsnummer;
+        private System.Windows.Forms.Label lbl_Nettobetrag;
+        private System.Windows.Forms.Label lbl_GesamtSumme;
+        private System.Windows.Forms.Label lbl_UmsatzSteuer;
     }
 }
