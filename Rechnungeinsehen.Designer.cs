@@ -37,11 +37,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_KundenName = new System.Windows.Forms.Label();
-            this.lbl_KundenStraße = new System.Windows.Forms.Label();
-            this.lbl_KundenOrt = new System.Windows.Forms.Label();
+            this.lbl_KundenAdress = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_RECHNUNG = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_RechnungsPositionen = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -53,7 +52,7 @@
             this.lbl_GesamtSumme = new System.Windows.Forms.Label();
             this.lbl_UmsatzSteuer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_RechnungsPositionen)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -143,27 +142,16 @@
             this.lbl_KundenName.TabIndex = 7;
             this.lbl_KundenName.Text = "Muster GmbH";
             // 
-            // lbl_KundenStraße
+            // lbl_KundenAdress
             // 
-            this.lbl_KundenStraße.AutoSize = true;
-            this.lbl_KundenStraße.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbl_KundenStraße.ForeColor = System.Drawing.Color.White;
-            this.lbl_KundenStraße.Location = new System.Drawing.Point(25, 203);
-            this.lbl_KundenStraße.Name = "lbl_KundenStraße";
-            this.lbl_KundenStraße.Size = new System.Drawing.Size(104, 17);
-            this.lbl_KundenStraße.TabIndex = 8;
-            this.lbl_KundenStraße.Text = "Musterstraße 4";
-            // 
-            // lbl_KundenOrt
-            // 
-            this.lbl_KundenOrt.AutoSize = true;
-            this.lbl_KundenOrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbl_KundenOrt.ForeColor = System.Drawing.Color.White;
-            this.lbl_KundenOrt.Location = new System.Drawing.Point(25, 220);
-            this.lbl_KundenOrt.Name = "lbl_KundenOrt";
-            this.lbl_KundenOrt.Size = new System.Drawing.Size(126, 17);
-            this.lbl_KundenOrt.TabIndex = 9;
-            this.lbl_KundenOrt.Text = "34567 Musterstadt";
+            this.lbl_KundenAdress.AutoSize = true;
+            this.lbl_KundenAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_KundenAdress.ForeColor = System.Drawing.Color.White;
+            this.lbl_KundenAdress.Location = new System.Drawing.Point(25, 203);
+            this.lbl_KundenAdress.Name = "lbl_KundenAdress";
+            this.lbl_KundenAdress.Size = new System.Drawing.Size(226, 17);
+            this.lbl_KundenAdress.TabIndex = 8;
+            this.lbl_KundenAdress.Text = "Musterstraße 4 34567 Musterstadt";
             // 
             // label7
             // 
@@ -187,13 +175,20 @@
             this.lbl_RECHNUNG.TabIndex = 11;
             this.lbl_RECHNUNG.Text = "Rechnung";
             // 
-            // dataGridView1
+            // dgv_RechnungsPositionen
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 299);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(652, 234);
-            this.dataGridView1.TabIndex = 12;
+            this.dgv_RechnungsPositionen.AllowUserToAddRows = false;
+            this.dgv_RechnungsPositionen.AllowUserToDeleteRows = false;
+            this.dgv_RechnungsPositionen.AllowUserToResizeColumns = false;
+            this.dgv_RechnungsPositionen.AllowUserToResizeRows = false;
+            this.dgv_RechnungsPositionen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_RechnungsPositionen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_RechnungsPositionen.Location = new System.Drawing.Point(12, 299);
+            this.dgv_RechnungsPositionen.Name = "dgv_RechnungsPositionen";
+            this.dgv_RechnungsPositionen.RowHeadersVisible = false;
+            this.dgv_RechnungsPositionen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgv_RechnungsPositionen.Size = new System.Drawing.Size(652, 234);
+            this.dgv_RechnungsPositionen.TabIndex = 12;
             // 
             // label9
             // 
@@ -323,11 +318,10 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_RechnungsPositionen);
             this.Controls.Add(this.lbl_RECHNUNG);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lbl_KundenOrt);
-            this.Controls.Add(this.lbl_KundenStraße);
+            this.Controls.Add(this.lbl_KundenAdress);
             this.Controls.Add(this.lbl_KundenName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -339,7 +333,7 @@
             this.Name = "Rechnungeinsehen";
             this.Text = "Rechnungserstellung";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_RechnungsPositionen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,11 +349,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbl_KundenName;
-        private System.Windows.Forms.Label lbl_KundenStraße;
-        private System.Windows.Forms.Label lbl_KundenOrt;
+        private System.Windows.Forms.Label lbl_KundenAdress;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbl_RECHNUNG;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_RechnungsPositionen;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

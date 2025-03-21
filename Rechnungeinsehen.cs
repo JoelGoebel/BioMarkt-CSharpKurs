@@ -21,11 +21,53 @@ namespace ProNaturBiomarkt
 
             InitializeComponent();
             Rechnung rechnung = GetDataForInvoice(rechnungsID);
+
+            InsertDataInGUI(rechnung);
+
         }
+
 
         public void InsertDataInGUI(Rechnung rechnung)
         {
+            lbl_KundenName.Text = rechnung.Ku_Name + " " + rechnung.Ku_LastName;
+            lbl_KundenAdress.Text = rechnung.Ku_Adress;
+            lbl_RECHNUNG.Text = lbl_RECHNUNG.Text + " " + rechnung.Re_Invoice_ID.ToString();
+            lbl_Rechnungsnummer.Text = rechnung.Re_Invoice_ID.ToString();
+            lbl_Rechnungsdatum.Text = rechnung.Re_Date.ToString("dd.MM.yyyy");
+            lbl_Faelligkeitsdatum.Text = rechnung.Re_DueDate.ToString("dd.MM.yyyy");             
+
+            Decimal GesammtSumme = 0;
             //Get Total Price of Invoice
+            for (int i = 0; i < rechnung.RePo_TotalPrice.Count; i++)
+            {
+                GesammtSumme += rechnung.RePo_TotalPrice[i];
+            }
+            Decimal NettoBetrag = Math.Round((GesammtSumme / 119) * 100,2);
+            Decimal UsT = Math.Round(GesammtSumme - NettoBetrag,2);
+
+            lbl_GesamtSumme.Text = GesammtSumme.ToString() + "€";
+            lbl_Nettobetrag.Text = NettoBetrag.ToString() + "€";
+            lbl_UmsatzSteuer.Text = UsT.ToString() + "€";
+
+            //TODO DataSet erstellen für anbindung an DataGridView
+            DataSet ds = new DataSet();
+
+            DataTable dt = new DataTable("Produkte");
+            dt.Columns.Add("ProduktID", typeof(int));
+            dt.Columns.Add("Bezeichnung", typeof(string));
+            dt.Columns.Add("Marke", typeof(string));
+            dt.Columns.Add("Einzelpreis", typeof(decimal));
+            dt.Columns.Add("Menge", typeof(int));
+            dt.Columns.Add("Gesamtpreis", typeof(decimal));
+
+            for (int i = 0; i <rechnung.RePo_ProductID.Count; i++)
+            {
+                dt.Rows.Add( rechnung.RePo_ProductID[i], rechnung.Pro_Name[i], rechnung.Pro_Brand[i], rechnung.RePo_Price[i], rechnung.RePo_Amount[i], rechnung.RePo_TotalPrice[i]);
+            }
+
+            ds.Tables.Add(dt);
+
+            dgv_RechnungsPositionen.DataSource = ds.Tables[0];
 
 
         }
