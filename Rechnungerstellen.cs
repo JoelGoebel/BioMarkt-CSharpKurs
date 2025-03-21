@@ -82,6 +82,7 @@ namespace ProNaturBiomarkt
             DatabaseConnection.Close();
         }
 
+        
         public int RechnungAnlegen(string KundenID)
         {
             DateTime Today = DateTime.Now;

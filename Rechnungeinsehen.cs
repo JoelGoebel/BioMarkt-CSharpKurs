@@ -49,7 +49,8 @@ namespace ProNaturBiomarkt
             lbl_Nettobetrag.Text = NettoBetrag.ToString() + "€";
             lbl_UmsatzSteuer.Text = UsT.ToString() + "€";
 
-            //TODO DataSet erstellen für anbindung an DataGridView
+            UpdateTotalPriceInvoice(rechnung.Re_Invoice_ID, GesammtSumme);
+            
             DataSet ds = new DataSet();
 
             DataTable dt = new DataTable("Produkte");
@@ -70,6 +71,16 @@ namespace ProNaturBiomarkt
             dgv_RechnungsPositionen.DataSource = ds.Tables[0];
 
 
+        }
+        public void UpdateTotalPriceInvoice(int InvoiceID, Decimal TotalSum)
+        {
+            DatabaseConnection.Open();
+            string query = "UPDATE Rechnung SET GesamtBetrag = @TotalSum WHERE Rechnungs_ID = @InvoiceID";
+            SqlCommand sqlCommand = new SqlCommand(query, DatabaseConnection);
+            sqlCommand.Parameters.AddWithValue("@TotalSum", TotalSum);
+            sqlCommand.Parameters.AddWithValue("@InvoiceID", InvoiceID);
+            sqlCommand.ExecuteNonQuery();
+            DatabaseConnection.Close();
         }
 
         public Rechnung GetDataForInvoice(int RechnungsID)
